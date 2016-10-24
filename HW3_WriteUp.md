@@ -46,10 +46,10 @@ By using formula from 4.3-5 nd 4.4-2, we can see that the 4.4-2 is periodic in b
 Because tent can be obtained by convolving two equals boxes, and by convolution theorem, we know that the product of two Fourier Transformed boxes is the same as convolution of two boxes, so we can obtain squared function by Fourier transform box function.
 ###Problem 4.12
 **Consider a checkerboard image in which each square is 1 * 1 mm. Assuming that the image extends infinitely in both coordinate directions, what is the mini- mum sampling rate (in samples/mm) required to avoid aliasing?**
-We can see the black and white squares as one pattern, so that the period is 2mm. $\mu_max = \$
+We can see the black and white squares as one pattern, so that the sampling rate should be 2mm which means $\mu_max = 1mm\$.
 ###Problem 4.13
 **We know from the discussion in Section 4.5.4 that shrinking an image can cause aliasing. Is this true also of zooming? Explain.**
-Zooming will not cause aliasing.
+Zooming will not cause aliasing because zooming only add new pixels to the original image, which will not affect the original pixels and cause them to overlap. Thus, aliasing doesn't happen to zooming.
 ###Problem 4.15
 **You are given a “canned” program that computes the 2-D, DFT pair. However, it is not known in which of the two equations the $1/MN$ term is included or if it was split as two constants $1/\sqrt{MN}$ in front of both the forward and inverse transforms. How can you find where the term(s) is (are) included if this information is not available in the documentation?**
 ###Problem 4.21
