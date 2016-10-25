@@ -46,7 +46,7 @@ By using formula from 4.3-5 nd 4.4-2, we can see that the 4.4-2 is periodic in b
 Because tent can be obtained by convolving two equals boxes, and by convolution theorem, we know that the product of two Fourier Transformed boxes is the same as convolution of two boxes, so we can obtain squared function by Fourier transform box function.
 ###Problem 4.12
 **Consider a checkerboard image in which each square is 1 * 1 mm. Assuming that the image extends infinitely in both coordinate directions, what is the mini- mum sampling rate (in samples/mm) required to avoid aliasing?**
-We can see the black and white squares as one pattern, so that the sampling rate should be 2mm which means $\mu_max = 1mm\$.
+We can see the black and white squares as one pattern, so that the period should be 2mm which means $\mu_max = \frac{1}{2mm}$, so the sampling rate $ \frac{1}{\Delta T} > 2 \mu_max = 1 \, sample/mm$.
 ###Problem 4.13
 **We know from the discussion in Section 4.5.4 that shrinking an image can cause aliasing. Is this true also of zooming? Explain.**
 Zooming will not cause aliasing because zooming only add new pixels to the original image, which will not affect the original pixels and cause them to overlap. Thus, aliasing doesn't happen to zooming.
@@ -54,10 +54,12 @@ Zooming will not cause aliasing because zooming only add new pixels to the origi
 **You are given a “canned” program that computes the 2-D, DFT pair. However, it is not known in which of the two equations the $1/MN$ term is included or if it was split as two constants $1/\sqrt{MN}$ in front of both the forward and inverse transforms. How can you find where the term(s) is (are) included if this information is not available in the documentation?**
 ###Problem 4.21
 **The need for image padding when filtering in the frequency domain was dis- cussed in Section 4.6.6. We showed in that section that images needed to be padded by appending zeros to the ends of rows and columns in the image (see the following image on the left). Do you think it would make a difference if we centered the image and surrounded it by a border of zeros instead (see image on the right), but without changing the total number of zeros used? Explain.**
+
 ###Problem 4.23
 **You know from Table 4.2 that the dc term, F(0, 0), of a DFT is proportional to the average value of its corresponding spatial image. Assume that the image is of size M * N. Suppose that you pad the image with zeros to size P * Q, where P and Q are given in Eqs. (4.6-31) and (4.6-32). Let $F_p (0, 0)$ denote the dc term of the DFT of the padded function. 
 (a) What is the ratio of the average values of the original and padded images? 
 (b) Is $F_p(0, 0) = F(0, 0)$? Support your answer mathematically.**
+
 
 
 
